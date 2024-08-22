@@ -22,12 +22,12 @@ onMounted(() =>{
             <div class="row">
                 <div class="col-md-9 mx-auto p-3">
 
-                    <div class="d-flex gap-1 mb-2">
+                    <!-- <div class="d-flex gap-1 mb-2">
                         <a href="/dashboard" class="back-btn">
                             <vue-feather type="arrow-left"/>
                         </a>
                         <h2 class="fw-semibold text-primary">Order Invoice</h2>
-                    </div>
+                    </div> -->
 
 
                     <div class="card invoice-preview-card shadow-none">
@@ -38,7 +38,7 @@ onMounted(() =>{
                                         <div class="logo-wrapper">
                                             <img src="../../../images/logo.png" alt="" height="60">
                                         </div>
-                                        <h3 class="card-text">AMBLE TRADING</h3>
+                                        <h3 class="card-text">Fashion website</h3>
 
                                         <h2 class="mt-1">Invoice To: </h2>
                                         <p class="card-text mb-0 pb-0">Name: <strong>{{ order?.customer?.name }}</strong></p>

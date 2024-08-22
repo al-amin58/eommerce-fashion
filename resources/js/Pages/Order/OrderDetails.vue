@@ -141,7 +141,7 @@ const changePaymentStatus = (event) =>{
                                         </select>
                                 </div>
 
-                                <!--
+<!--                                 
 
                                                                         <div class="col-xl-4 p-0 mt-xl-0 mt-2">
                                                                             <h6 class="mb-2">Payment Details:</h6>

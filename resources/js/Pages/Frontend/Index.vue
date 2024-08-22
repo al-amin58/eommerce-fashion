@@ -46,7 +46,7 @@
 </script>
 
 <template>
-    <Head title="Home" />
+    <Head title="Home"/>
     <Layout>
         <div class="bg-white page-shadow">
             <div class="container">

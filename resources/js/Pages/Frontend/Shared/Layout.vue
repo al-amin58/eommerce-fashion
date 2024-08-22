@@ -100,10 +100,15 @@ const pages = computed(() =>{
                         <p class="m-0 bg-primary d-flex align-items-center justify-content-center rounded-5 position-absolute" style="width:24px;height: 24px;top: -12px;right: -14px;">{{ cartStore.getCartLength }}</p>
                     </div>
                 </a>
-                <a href="/dashboard" class="d-lg-block d-none text-white">
+                <a href="/dashboard" class="d-lg-block d-none text-white" style="margin-left: 20px;">
                     <div class="d-flex align-items-center"  style="gap: 5px;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><g fill="none" stroke="#DE3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0"/><path d="M9 10a3 3 0 1 0 6 0a3 3 0 1 0-6 0m-2.832 8.849A4 4 0 0 1 10 16h4a4 4 0 0 1 3.834 2.855"/></g></svg>
-                        <div class="">
+                        <div v-if="$page.props.auth.user" >
+                            <div class="d-flex align-items-center "> 
+                                <a class="text-primary fw-semibold fs-5" href="/dashboard">Dashboard</a>
+                            </div>
+                        </div>
+                        <div v-else>
                             <div class="d-flex align-items-center "> 
                                 <a class="text-primary fw-semibold fs-5" href="/customer/login">Sign In</a>
                             </div>
