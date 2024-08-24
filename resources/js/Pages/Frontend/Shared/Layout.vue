@@ -21,7 +21,9 @@ onMounted(()=>{
     store.setSetting('instagram_profile');
     store.setSetting('twitter_profile');
     store.setSetting('linkedin_profile');
-    store.footerData('customPages')
+    store.footerData('custom_pages');
+    
+    
 
 })
 const props = defineProps({
@@ -63,7 +65,7 @@ const openSubMenu = (node) => openSubMenuUl.value = node.id;
 const openChildMenu = (node) => openChildMenuUl.value = node.id;
 
 const pages = computed(() =>{
-    return store.settingItem.find(item => item.key === 'customPages')?.val
+    return store.settingItem.find(item => item.key === 'custom_pages')?.val
 })
 
 
@@ -103,7 +105,7 @@ const pages = computed(() =>{
                 <a href="/dashboard" class="d-lg-block d-none text-white" style="margin-left: 20px;">
                     <div class="d-flex align-items-center"  style="gap: 5px;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><g fill="none" stroke="#DE3163" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0-18 0"/><path d="M9 10a3 3 0 1 0 6 0a3 3 0 1 0-6 0m-2.832 8.849A4 4 0 0 1 10 16h4a4 4 0 0 1 3.834 2.855"/></g></svg>
-                        <div v-if="$page.props.auth.user" >
+                        <div v-if="$page.props.auth?.user" >
                             <div class="d-flex align-items-center "> 
                                 <a class="text-primary fw-semibold fs-5" href="/dashboard">Dashboard</a>
                             </div>
@@ -123,7 +125,7 @@ const pages = computed(() =>{
     </div>
     
 
-    
+ 
 
     <nav class="navbar navbar-expand-md fixed-bottom bg-primary d-lg-none">
         <div class="container-fluid">
@@ -270,14 +272,14 @@ const pages = computed(() =>{
         <slot/>
     </div>
 
-    <!-- <a data-bs-toggle="modal"
+    <a data-bs-toggle="modal"
         data-bs-target="#addItemModal"
         class="cart-details-button" style="right: 0; z-index: 11111">
         <div class="text-white">
             <vue-feather type="shopping-bag"/>
             <p class="m-0">{{ cartStore.getCartLength }} Items</p>
         </div>
-    </a> -->
+    </a>
 
     <div class="modal modal-slide-in fade sm-cart-modal" id="addItemModal" aria-hidden="true" v-vb-is:modal>
         <div class="modal-dialog sm-cart-width">

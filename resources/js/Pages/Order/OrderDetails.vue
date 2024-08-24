@@ -1,4 +1,4 @@
-<script setup>
+ <script setup>
 
 import {computed, onMounted} from "vue";
 import {useForm} from "@inertiajs/inertia-vue3";

@@ -53,11 +53,11 @@
                 <section>
                     <div class="row">
                         <div class="col-12 p-sm-0">
-                            <div class="row match-height slider-section ms-auto">
-                                <Carousel :autoplay="5000" :wrap-around="true" v-if="true">
+                            <div class="row match-height slider-section ms-auto" >
+                                <Carousel :autoplay="5000" :wrap-around="true" v-if="true" style="height: 100%; width: 100%;">
                                     <Slide v-for="slide in props.sliders" :key="slide">
-                                        <div class="carousel__item">
-                                            <img :src="`/storage/${slide.image}`" alt="">
+                                        <div class="carousel__item" >
+                                            <img :src="`/storage/${slide.image}`" alt=""  >
                                         </div>
                                     </Slide>
                                     <template #addons>
@@ -65,7 +65,7 @@
                                         <Pagination/>
                                     </template>
                                 </Carousel>
-                                <Carousel :wrap-around="true" v-else>
+                                <Carousel :wrap-around="true" v-else style="height: 100%; width: 100%;">
                                     <Slide v-for="slide in props.sliders" :key="slide">
                                         <div class="carousel__item">
                                             <img :src="`/storage/${slide.image}`" alt="">

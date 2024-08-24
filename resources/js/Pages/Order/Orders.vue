@@ -4,10 +4,13 @@
     const props = defineProps({
         orders:[]|null,
     })
+  
+    
 </script>
 
 
 <template>
+    
     <Head>
         <meta type="description" content="Information about my app" head-key="description">
     </Head>
@@ -25,6 +28,7 @@
                                 <option value="100">100</option>
                             </select>
                         </div>
+                        
                         <div
                             class="d-flex align-items-center justify-content-center justify-content-lg-end flex-lg-nowrap flex-wrap">
                             <div class="select-search-area">
@@ -41,14 +45,14 @@
 
                     <table class="order-list-table table">
                         <thead class="table-light">
-                        <tr class=null>
-                            <th class="sorting">Id</th>
-                            <th class="sorting">price</th>
-                            <th class="sorting">Order Status</th>
-                            <th class="sorting">Payment Method</th>
-                            <th class="sorting">Payment Status</th>
-                            <th class="sorting"></th>
-                        </tr>
+                            <tr class=null>
+                                <th class="sorting">Id</th>
+                                <th class="sorting">price</th>
+                                <th class="sorting">Order Status</th>
+                                <th class="sorting">Payment Method</th>
+                                <th class="sorting">Payment Status</th>
+                                <th class="sorting"></th>
+                            </tr>
                         </thead>
                         <tbody>
                         <tr v-for="order in orders.data" :key="order.id">
@@ -62,8 +66,13 @@
                             <td class="text-uppercase">{{ order.item.payment_method }}</td>
 
                             <td>
-                                <span class="badge bg-light-primary text-capitalize">{{ order.item.payment_status }}</span>
+                                <span class="badge bg-light-primary text-capitalize">{{ order.item.payment_status}}</span>
                             </td>
+                            <!-- <vSelect :options="props.orders"
+                                         v-model="orderstatusForm.order_id"
+                                         label="title"
+                                         :reduce="order => order.id"
+                                         placeholder="Select Me As Parent"/> -->
                             <td class="order-action d-flex align-items-center">
                                 <a :href="$page.props.auth.ADMIN_URL+'/single-order/'+order.item.id" class="btn btn-icon btn-gradient-primary btn-sm me-1" v-c-tooltip="'Show This Invoice.'">
                                     <vue-feather type="eye"/>

@@ -45,12 +45,13 @@ class HomeSettingController extends Controller
 
 
     public function footerSettings(){
-        $topProducts = json_decode(get_setting('customPages'));
+        $topProducts = json_decode(get_setting('custom_pages'));
         return inertia('Settings/FooterSetting',[
             'pages' => Page::all(),
             'savePages' => $topProducts,
             'main_url' => URL::route('admin.businessSave'),
         ]);
+        
     }
 
 }

@@ -7,9 +7,7 @@ export const useDataStore = defineStore('data', {
         topCategories:[],
         featuredCategories:[],
         wishList:[],
-
         settingItem:[],
-
         authData:{}
     }),
 
@@ -38,6 +36,7 @@ export const useDataStore = defineStore('data', {
                     key:key,
                     val: res.data
                 });
+               
             })
         },
         headerMenu(key){

@@ -21,7 +21,6 @@ let createForm = useForm({
     title: null,
     slug:null,
     summery:null,
-
     seoTitle:null,
     seoKeyWords:null,
     seoImage:null,
@@ -91,10 +90,10 @@ watchEffect(() => {
                                     <label>slug</label> <info title="Url Slug Convert To Title"/>
                                     <input class="form-control" disabled type="text" v-model="createForm.slug" placeholder="e.g Title-convert-to-slug">
                                 </div>
-<!--                                <div class="mt-2">
+                               <!-- <div class="mt-2">
                                     <label for="switch">Status</label>
                                     <Switch label="Status" v-model="createForm.status" id="switch" class="justify-content-start"/>
-                                </div>-->
+                                </div> -->
                             </div>
                         </div>
                         <div class="card">

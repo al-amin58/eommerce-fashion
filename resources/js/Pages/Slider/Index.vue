@@ -63,6 +63,7 @@ const handelSubmit = () =>{
 
 const deleteItem = (id) => {
     router.post(`/panel/delete-slider/${id}`);
+    window.location.reload();
 }
 </script>
 

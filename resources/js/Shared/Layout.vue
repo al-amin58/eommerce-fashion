@@ -49,7 +49,7 @@
         <footer class="footer footer-static footer-light">
             <div class="d-flex align-items-center justify-content-between mt-2">
                 <p>&copy; {{ new Date().getFullYear() }} {{ $page.props.auth.APP_NAME }} All rights reserved by </p>
-                <p>Powered By: <a href="https://creativetechpark.com" target="_blank" class="text-warning">Web Development Company</a> Creative Tech Park</p>
+                <p>Powered By: <a href="#" target="_blank" class="text-warning">Web Development Company</a> Online Shop</p>
             </div>
         </footer>
         <button class="btn btn-primary btn-icon scroll-top" type="button"><i data-feather="arrow-up"></i></button>

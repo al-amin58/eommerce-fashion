@@ -24,7 +24,7 @@ const props = defineProps({
 
 const isLoding = ref(false);
 let formData = useForm({
-    customPages:[{
+    custom_pages:[{
         title: '',
         pages: [],
         status: false,
@@ -33,18 +33,18 @@ let formData = useForm({
 
 
 let addRow = () => {
-    formData.customPages.push({
+    formData.custom_pages.push({
         title: '',
         pages: [],
         status: true,
     })
 }
 let deleteRow = (index) => {
-    formData.customPages.splice(index, 1)
+    formData.custom_pages.splice(index, 1)
 }
 
 onMounted(() =>{
-    formData.customPages = props.savePages ?? [{}];
+    formData.custom_pages = props.savePages ?? [{}];
 })
 
 
@@ -74,14 +74,14 @@ let updateSettings = () =>{
     <layout>
         <div class="row">
             <div class="col-md-6" data-repeater-item
-                 v-for="(value, index) in formData.customPages">
+                 v-for="(value, index) in formData.custom_pages">
                 <div class="card">
                     <div class="card-body position-relative imgContainer">
                         <h2 class="card-title">Add banners 2</h2>
                         <div class="mt-1">
-                            <input type="text" v-model="formData.customPages[index].title" class="form-control mb-1" placeholder="e.g title">
+                            <input type="text" v-model="formData.custom_pages[index].title" class="form-control mb-1" placeholder="e.g title">
                             <vSelect :options="props.pages"
-                                     v-model="formData.customPages[index].pages"
+                                     v-model="formData.custom_pages[index].pages"
                                      :reduce="item => item.id"
                                      multiple
                                      label="title"
@@ -95,7 +95,7 @@ let updateSettings = () =>{
                         </div>
 
                         <button
-                            v-if="index === formData.customPages.length - 1"
+                            v-if="index === formData.custom_pages.length - 1"
                             class="btn btn-primary btn-sm float-end mt-25"
                             type="button"
                             name="button"
